@@ -26,7 +26,7 @@ export default {
         return {
             jobs: [
                 {date: '24 Jan, 2022',title: 'Android is the best os on the mobile app so', id: 199, description: 'android description'},
-                {date: '16 Aug', title: 'iOS', id: 2, description: 'iOS description'},
+                {date: '16 Aug', title: 'iOS Swift', id: 2, description: 'iOS description'},
                 {date: '16 Aug',title: 'Vue', id: 3, description: 'Vue description'},
                 {date: '16 Aug',title: 'React', id: 4, description: 'React description'},
                 {date: '16 Aug',title: 'Node', id: 5, description: 'Node description'}
