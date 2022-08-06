@@ -1,0 +1,11 @@
+
+  {
+    "posts": [
+            { "id": 1, "isComplete": true, "category" : ["Android", "Phone", "Version 12"] , "owner": "Leon Pin", "title": "An OS optimized for large screens", "task": ["Update New UI","Enhancement Service","New Animation"], "date": "24 Jan, 2022","deadline":"26 Jan, 2023", "description": "12L is a special feature drop that makes Android 12 even better on tablets and foldable devices. With 12L, we’ve optimized and polished the system UI for large screens, made multitasking more powerful and intuitive, and improved compatibility support so apps look better right out of the box. Test your apps on 12L today and optimize for large screen devices!"},
+            { "id": 2, "isComplete": false, "owner": "Steve Job", "title": "Vue Project", "date": "24 July, 2022", "deadline":"26 Jan, 2023", "description": "This is the description of Vue Project"},
+            { "id": 3, "isComplete": false, "owner": "Mark Welberg", "title": "Android Project", "date": "14 Feb, 2022","deadline":"09 Jan, 2024", "description": "This is the description of Android Projecr"},
+            { "id": 4, "isComplete": false, "category" : ["Movie", "Superhero", "Films", "Action-Movie", "Spider-Man"], "owner": "Tom Holland", "title": "iOs Project", "date": "09 Aug, 2022","deadline":"26 Feb, 2023", "description": "This is the description of iOS Project"},
+            { "id": 5, "isComplete": true, "owner": "Jeff Richer", "title": "Flutter", "date": "22 Dec, 2022", "deadline":"10 July, 2022", "description": "This is the description of Flutter"}
+          ],
+    "comment":[]
+  }
