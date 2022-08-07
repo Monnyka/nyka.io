@@ -4,6 +4,7 @@ import About from '../views/AboutView.vue'
 import LogInView from '../views/LogInView.vue'
 import ProjectView from '../views/project/ProjectView.vue'
 import ProjectDetailsView from '../views/project/ProjectDetailsView.vue'
+import CreateProject from '../views/project/CreateProject.vue'
 
 const routes = [
   {
@@ -31,6 +32,11 @@ const routes = [
     name: 'projectdetails',
     component: ProjectDetailsView,
     props: true
+  },
+  {
+    path: '/createproject',
+    name: 'createproject',
+    component: CreateProject
   }
 ]
 
