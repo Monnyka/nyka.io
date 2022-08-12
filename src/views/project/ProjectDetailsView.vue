@@ -6,15 +6,16 @@
   </div>
   <div class="col-span-2 flex flex-col items-start p-8">
     <p class="font-1xl ">Project name</p>
+    <div class="flex flex-row items-center">
+      <div v-if="project.isComplete" class="rounded-full px-4 mr-4 border-2 mt-2 p-2 border-green-500">
+        <p class="font-bold text-gray-500">Complete</p>
+      </div>
     <h1 class="text-3xl font-black mt-2 text-green-500 text-start">
       {{project.title}}
     </h1>
-
-    <p class="text-sm text-bold">Initiated by: {{project.owner}}</p>
-    <p v-if="project.isComplete" class="text-sm mt-8 uppercase font-bold">Status is completed</p>
-
+</div>
+    <p class="text-sm text-bold mt-2">Initiated by: {{project.owner}}</p>
     <!-- Category -->
-    <p v-if="project.category" class="text-sm uppercase mt-8 font-bold">category</p>
     <div v-if="project.category" class="flex flex-row items-start">
         <div v-for="category in project.category" :key="category" class="bg-green-500 text-sm font-semibold rounded-full text-white p-1 px-4 mt-2 mr-2">
           <p>{{category}}</p>
@@ -24,14 +25,20 @@
         <!-- Project Option -->
     <p class="text-sm uppercase mt-8 font-bold">Options</p>
     <div class="flex flex-row">
-    <!-- edit -->
-    <div @click="completeProject()" class="delete flex flex-row p-1 px-4 mt-2 mr-2 max-w-auto rounded-md bg-gray-200 cursor-pointer">
+          <!-- Update -->
+    <div class="delete flex flex-row p-1 px-4 mt-2 mr-2 max-w-auto rounded-md bg-gray-200 cursor-pointer hover:shadow-sm hover:bg-slate-300 hover:font-white">
       <span class="material-icons text-gray-500">edit</span>
-      <p class="text-gray-500 font-bold ml-2">Edit</p>
+      <p class="text-gray-500 font-bold ml-2 ">Update</p>
+      </div>
+
+    <!-- edit -->
+    <div @click="completeProject()" class="delete flex flex-row p-1 px-4 mt-2 mr-2 max-w-auto rounded-md bg-gray-200 cursor-pointer hover:shadow-sm hover:bg-slate-300">
+      <span class="material-icons text-gray-500">check_circle_outline</span>
+      <p class="text-gray-500 font-bold ml-2">Complete</p>
       </div>
 
     <!-- delete -->
-      <div @click="deleteProject()" class="delete flex flex-row p-1 px-4 mt-2 mr-2 max-w-auto rounded-md bg-red-400 cursor-pointer">
+      <div @click="deleteProject()" class="delete flex flex-row p-1 px-4 mt-2 mr-2 max-w-auto rounded-md bg-red-400 cursor-pointer hover:shadow-sm hover:bg-red-500">
       <span class="material-icons text-white">delete</span>
       <p class="text-white font-bold ml-2">{{isDeleted}}</p>
       </div>
@@ -83,7 +90,7 @@ export default {
     },
 
     completeProject(){
-      fetch('URI', {method: 'PATCH',
+      fetch(this.URI, {method: 'PATCH',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({isComplete: !this.project.isComplete})
       })

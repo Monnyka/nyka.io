@@ -3,23 +3,23 @@
   <nav class="relative flex container mx-auto p-3">
     <div class="flex items-center justify-between">
       <div class="font-bold space-x-10 md:flex ">
-        <router-link to="/" class="hover:text-green-500 hover:underline"
+        <router-link to="/" class="hover:text-blue-500 hover:underline"
           >Home</router-link
         >
         <router-link
           to="/about"
-          class="hover:text-green-500 hover:underline"
+          class="hover:text-blue-500 hover:underline"
           >About</router-link
         >
 
         <router-link
           to="/project"
-          class="hover:text-green-500 hover:underline"
+          class="hover:text-blue-500 hover:underline"
           >Project</router-link
         >
         <router-link
           to="/about"
-          class="hover:text-green-500 hover:underline"
+          class="hover:text-blue-500 hover:underline"
           >Blog</router-link
         >
       </div>
